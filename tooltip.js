@@ -17,7 +17,7 @@
       'left' : 10
     }, options);
 
-    return this.each(function(){ 
+    return this.each(function(){
 
       var title = $(this).attr(attribute);
 
@@ -40,14 +40,12 @@
             .css('color', '#ffffff')
             .css('display', 'none')
             .css('font-size', '11px')
-            .fadeIn('fast');    
+            .fadeIn('fast');
         }
       },
-      function(){  
+      function(){
         $('#' + unique_id).remove();
-      });
-
-      $(this).mousemove(function(e){
+      }).mousemove(function(e){
 
         if (attribute == 'title' || attribute == 'alt')
         {
@@ -59,6 +57,8 @@
             .css('top', (e.pageY + settings.top) + 'px')
             .css('left', (e.pageX + settings.left) + 'px');
         }
+      }).mousedown(function() {
+        $('#' + unique_id).remove();
       });
 
     });
