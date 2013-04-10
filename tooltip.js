@@ -27,7 +27,7 @@
 
         if (settings.custom_class)
         {
-          $('#' + unique_id).addClass(custom_class);
+          $('#' + unique_id).addClass(settings.custom_class);
         }
         else
         {
